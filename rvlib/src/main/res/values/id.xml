@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="header_container" type="id">header_container</item>
+    <item name="header_view" type="id">header_view</item>
+    <item name="nova_support_nova_recycler_view_tag" type="id">soda_recycler_view_tag</item>
+</resources>
