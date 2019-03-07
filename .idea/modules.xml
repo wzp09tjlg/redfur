@@ -6,7 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/commonlib/commonlib.iml" filepath="$PROJECT_DIR$/commonlib/commonlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/corelib/corelib.iml" filepath="$PROJECT_DIR$/corelib/corelib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libmvp/libmvp.iml" filepath="$PROJECT_DIR$/libmvp/libmvp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvplib/libmvp.iml" filepath="$PROJECT_DIR$/mvplib/libmvp.iml" />
       <module fileurl="file://$PROJECT_DIR$/rvlib/rvlib.iml" filepath="$PROJECT_DIR$/rvlib/rvlib.iml" />
     </modules>
   </component>

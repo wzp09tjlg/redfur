@@ -11,7 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/commonlib" />
             <option value="$PROJECT_DIR$/corelib" />
-            <option value="$PROJECT_DIR$/libmvp" />
+            <option value="$PROJECT_DIR$/mvplib" />
             <option value="$PROJECT_DIR$/rvlib" />
           </set>
         </option>
