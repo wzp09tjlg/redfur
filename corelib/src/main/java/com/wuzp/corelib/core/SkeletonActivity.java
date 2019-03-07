@@ -76,9 +76,6 @@ public abstract class SkeletonActivity extends AppCompatActivity implements ILiv
         return active;
     }
 
-    @Nullable
-    public abstract PageInstrument getPageInstrument();
-
     protected void setupComponents() {
     }
 

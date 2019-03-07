@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <FrameLayout
+        android:id="@+id/fl_back_area"
+        android:layout_width="48dp"
+        android:layout_height="48dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/common_icon_left_nor"/>
+    </FrameLayout>
+
+    <TextView
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/tv_title_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#666666"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="center title"/>
+
+    <FrameLayout
+        android:id="@+id/fl_menu_area"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

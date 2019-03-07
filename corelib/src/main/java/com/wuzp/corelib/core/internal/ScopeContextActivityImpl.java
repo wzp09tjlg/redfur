@@ -11,7 +11,6 @@ import com.wuzp.corelib.core.SkeletonActivity;
 /**
  * @author wuzhenpeng03
  */
-
 @RestrictTo(RestrictTo.Scope.LIBRARY)
 public class ScopeContextActivityImpl extends ScopeContextBase {
 
@@ -27,9 +26,6 @@ public class ScopeContextActivityImpl extends ScopeContextBase {
 
             @Override
             public void push() {
-                if (activity.getPageInstrument() != null) {
-                    //activity.getPageInstrument().pushPage();
-                }
             }
 
             @Override
@@ -39,9 +35,6 @@ public class ScopeContextActivityImpl extends ScopeContextBase {
 
             @Override
             public void popToRoot() {
-                if (activity.getPageInstrument() != null) {
-                    //activity.getPageInstrument().popToRoot();
-                }
             }
 
             @Override
@@ -56,9 +49,6 @@ public class ScopeContextActivityImpl extends ScopeContextBase {
 
             @Override
             public void showDialog(@NonNull Dialog dialog, @NonNull String tag) {
-                if (activity.getPageInstrument() != null) {
-                    //dialog.show(activity.getPageInstrument(), tag);
-                }
             }
         };
     }
