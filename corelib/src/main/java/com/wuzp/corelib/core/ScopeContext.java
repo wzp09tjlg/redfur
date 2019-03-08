@@ -24,8 +24,6 @@ public interface ScopeContext {
     @NonNull
     Bundle getBundle();
 
-    @NonNull INavigator getNavigator();
-
     @NonNull LiveHandler getLiveHandler();
 
     boolean addObserver(@NonNull IScopeLifecycle observer);

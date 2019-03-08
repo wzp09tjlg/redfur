@@ -7,7 +7,6 @@ import java.util.Map;
 
 public abstract class ScopeContextBase implements ScopeContext, IScopeLifecycle {
 
-    private INavigator mNavigator;
     private LiveHandlerImpl mLiveHandler;
 
     private Map<String, Object> mAttached = new ArrayMap<>();
@@ -41,16 +40,6 @@ public abstract class ScopeContextBase implements ScopeContext, IScopeLifecycle 
     public void onDestroy(ILive live) {
         liveHandler().onDestroy(live);
     }
-
-    @Override
-    public INavigator getNavigator() {
-        if (mNavigator == null) {
-            mNavigator = newNavigator();
-        }
-        return mNavigator;
-    }
-
-    protected abstract INavigator newNavigator();
 
     @Override
     public LiveHandler getLiveHandler() {
