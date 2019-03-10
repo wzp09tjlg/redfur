@@ -27,41 +27,6 @@ public final class ScopeContextComponentImpl extends ScopeContextBase {
     }
 
     @Override
-    protected INavigator newNavigator() {
-        return new INavigator() {
-            @Override
-            public void push() {
-                mOwner.getNavigator().push();
-            }
-
-            @Override
-            public void pushForResult() {
-                mOwner.getNavigator().pushForResult();
-            }
-
-            @Override
-            public void popToRoot() {
-                mOwner.getNavigator().popToRoot();
-            }
-
-            @Override
-            public void finish() {
-                mOwner.getNavigator().finish();
-            }
-
-            @Override
-            public void finish(Bundle data) {
-                mOwner.getNavigator().finish(data);
-            }
-
-            @Override
-            public void showDialog(@NonNull Dialog dialog, @NonNull String tag) {
-                mOwner.getNavigator().showDialog(dialog, tag);
-            }
-        };
-    }
-
-    @Override
     public Object getObject(String key) {
         Object result = super.getObject(key);
         if (result == null) {
