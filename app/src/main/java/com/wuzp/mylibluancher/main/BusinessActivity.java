@@ -8,7 +8,6 @@ import android.widget.FrameLayout;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.wuzp.mylibluancher.R;
-import com.wuzp.mylibluancher.R2;
 import com.wuzp.mylibluancher.base.BaseActivity;
 import com.wuzp.mylibluancher.main.menu.MenuComponent;
 import com.wuzp.mylibluancher.main.title.TitleComponent;
@@ -22,11 +21,11 @@ import com.wuzp.mylibluancher.main.title.TitleComponent;
  */
 public class BusinessActivity extends BaseActivity {
 
-    @BindView(R2.id.fl_title_bar_contain)
+    @BindView(R.id.fl_title_bar_contain)
     FrameLayout mTitleComponent;
-    @BindView(R2.id.fl_menu_contain)
+    @BindView(R.id.fl_menu_contain)
     FrameLayout mMenuComponent;
-    @BindView(R2.id.fl_business_contain)
+    @BindView(R.id.fl_business_contain)
     FrameLayout mBusinessComponent;
 
     @Override

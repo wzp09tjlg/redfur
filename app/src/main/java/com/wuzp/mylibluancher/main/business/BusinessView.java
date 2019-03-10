@@ -4,22 +4,23 @@ import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.wuzp.mylibluancher.R;
-import com.wuzp.mylibluancher.R2;
 import com.wuzp.mylibluancher.main.business.binder.BusinessItemBinder;
 import com.wuzp.mylibluancher.main.business.binder.EmptyBinder;
 import com.wuzp.mylibluancher.main.business.binder.HeaderBinder;
 import com.wuzp.rvlib.recyclerview.view.INovaRecyclerView;
 import com.wuzp.rvlib.recyclerview.view.NovaRecyclerView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * @author wuzhenpeng03
  */
 public class BusinessView extends Contract.AbsBusinessView {
 
-    @BindView(R2.id.rv_business_contain)
+    @BindView(R.id.rv_business_contain)
     NovaRecyclerView mRecycleView;
 
     @NonNull

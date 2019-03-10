@@ -4,12 +4,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.wuzp.mylibluancher.R;
-import com.wuzp.mylibluancher.R2;
 import com.wuzp.rvlib.recyclerview.binder.ItemBinder;
 import com.wuzp.rvlib.recyclerview.binder.ItemViewHolder;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * @author wuzhenpeng03
@@ -34,7 +35,7 @@ public class MenuBinder extends ItemBinder<MenuModel, MenuBinder.ViewHolder> {
 
     static class ViewHolder extends ItemViewHolder<MenuModel> {
 
-        @BindView(R2.id.tv_menu_name)
+        @BindView(R.id.tv_menu_name)
         TextView mMenuName;
 
         public ViewHolder(View view) {

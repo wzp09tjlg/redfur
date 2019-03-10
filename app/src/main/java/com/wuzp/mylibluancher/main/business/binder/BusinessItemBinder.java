@@ -5,12 +5,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.wuzp.mylibluancher.R;
-import com.wuzp.mylibluancher.R2;
 import com.wuzp.rvlib.recyclerview.binder.ItemBinder;
 import com.wuzp.rvlib.recyclerview.binder.ItemViewHolder;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * @author wuzhenpeng03
@@ -36,9 +37,9 @@ public class BusinessItemBinder extends ItemBinder<BusinessModel, BusinessItemBi
 
     static class ViewHolder extends ItemViewHolder<BusinessModel> {
 
-        @BindView(R2.id.iv_business_pic)
+        @BindView(R.id.iv_business_pic)
         ImageView mBusinessPic;
-        @BindView(R2.id.tv_business_item_name)
+        @BindView(R.id.tv_business_item_name)
         TextView mBusinessItemName;
 
         public ViewHolder(View view) {
