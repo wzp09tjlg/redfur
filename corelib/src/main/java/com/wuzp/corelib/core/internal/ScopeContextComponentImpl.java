@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RestrictTo;
-
 import com.wuzp.corelib.core.ScopeContext;
 import com.wuzp.corelib.core.ScopeContextBase;
 
@@ -13,7 +12,6 @@ import com.wuzp.corelib.core.ScopeContextBase;
  * 在这里对 LifeCycle 做个替换, 不影响业务使用.
  *
  */
-// inner class
 @RestrictTo(RestrictTo.Scope.LIBRARY)
 public final class ScopeContextComponentImpl extends ScopeContextBase {
 

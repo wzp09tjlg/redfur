@@ -11,6 +11,7 @@ import com.wuzp.mylibluancher.R;
 import com.wuzp.mylibluancher.base.BaseActivity;
 import com.wuzp.mylibluancher.main.menu.MenuComponent;
 import com.wuzp.mylibluancher.main.title.TitleComponent;
+import com.wuzp.mylibluancher.p2c.MainJava;
 
 /**
  * 真正业务层的activity
@@ -47,4 +48,16 @@ public class BusinessActivity extends BaseActivity {
         addComponent(menuComponent);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                MainJava mainJava = new MainJava();
+                mainJava.testP2C();
+            }
+        }).start();
+
+    }
 }

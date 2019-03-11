@@ -3,7 +3,6 @@ package com.wuzp.corelib.core.internal;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.RestrictTo;
-
 import com.wuzp.corelib.core.ScopeContextBase;
 
 @RestrictTo(RestrictTo.Scope.LIBRARY)
