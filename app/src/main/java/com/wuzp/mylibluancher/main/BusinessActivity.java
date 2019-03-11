@@ -1,6 +1,7 @@
 package com.wuzp.mylibluancher.main;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -12,6 +13,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.wuzp.mylibluancher.R;
 import com.wuzp.mylibluancher.base.BaseActivity;
+import com.wuzp.mylibluancher.event.ReceiverActivity;
 import com.wuzp.mylibluancher.main.menu.MenuComponent;
 import com.wuzp.mylibluancher.main.title.TitleComponent;
 
@@ -72,6 +74,11 @@ public class BusinessActivity extends BaseActivity {
         super.onResume();
         //testLeak();
         //testBlock();
+        gotoEvent();
+    }
+
+    private void gotoEvent() {
+        startActivity(new Intent(this, ReceiverActivity.class));
     }
 
     private void testBlock() {

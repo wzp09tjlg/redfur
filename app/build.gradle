@@ -39,6 +39,9 @@ dependencies {
     debugImplementation 'com.github.markzhai:blockcanary-android:1.5.0'
     releaseImplementation 'com.github.markzhai:blockcanary-no-op:1.5.0'
 
+    //eventbus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
     //依赖的源码库
     implementation project(':corelib')
     implementation project(':mvplib')
