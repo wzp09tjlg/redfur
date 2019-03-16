@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/commonlib/commonlib.iml" filepath="$PROJECT_DIR$/commonlib/commonlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/corelib/corelib.iml" filepath="$PROJECT_DIR$/corelib/corelib.iml" />
       <module fileurl="file://$PROJECT_DIR$/mvplib/mvplib.iml" filepath="$PROJECT_DIR$/mvplib/mvplib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netlib/netlib.iml" filepath="$PROJECT_DIR$/netlib/netlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/redfur.iml" filepath="$PROJECT_DIR$/redfur.iml" />
       <module fileurl="file://$PROJECT_DIR$/rvlib/rvlib.iml" filepath="$PROJECT_DIR$/rvlib/rvlib.iml" />
     </modules>

@@ -1,1 +1,1 @@
-include ':app', ':commonlib', ':rvlib', ':mvplib', ':corelib'
+include ':app', ':commonlib', ':rvlib', ':mvplib', ':corelib', ':netlib'
