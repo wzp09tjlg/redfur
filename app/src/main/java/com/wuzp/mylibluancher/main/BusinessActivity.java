@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -126,6 +127,13 @@ public class BusinessActivity extends BaseActivity {
         public void run() {
 
         }
+    }
+
+    public class TestThreadLocalSourceCheck{
+
+        Looper looper = null;
+        ThreadLocal<Looper> threadLocal = new ThreadLocal<>();
+
     }
 
 }
