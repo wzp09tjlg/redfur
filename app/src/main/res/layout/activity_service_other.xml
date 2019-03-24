@@ -5,20 +5,21 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/btn_common_service"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="start common service" />
-
-    <Button
-        android:id="@+id/btn_bind_service"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="start bind service" />
-
-    <Button
         android:id="@+id/btn_other_service"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="open other service" />
+        android:text="bind service"/>
+
+    <Button
+        android:id="@+id/btn_check_service_ability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="check service ability"/>
+
+    <Button
+        android:id="@+id/btn_unbind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="unbind"/>
+
 </LinearLayout>
