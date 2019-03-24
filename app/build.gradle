@@ -26,23 +26,19 @@ dependencies {
     //butterknife
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-
     //leakCannary
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
     debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
-
     //blockCanary
     implementation 'com.github.markzhai:blockcanary-android:1.5.0'
-
     // 仅在debug包启用BlockCanary进行卡顿监控和提示的话，可以这么用
     debugImplementation 'com.github.markzhai:blockcanary-android:1.5.0'
     releaseImplementation 'com.github.markzhai:blockcanary-no-op:1.5.0'
-
     //eventbus
     implementation 'org.greenrobot:eventbus:3.1.1'
-
     //依赖的源码库
     implementation project(':corelib')
     implementation project(':mvplib')
+    implementation project(':commonlib')
 }

@@ -3,6 +3,8 @@
     package="com.wuzp.mylibluancher">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -33,12 +35,32 @@
             android:process=":remote"/>
         <activity android:name=".anim.AnimActivity"
             android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".service.ServiceActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <!--/***********/-->
+        <!--/***service start ****/-->
+        <!--/***********/-->
+        <service android:name=".service.CommonService">
+            <intent-filter>
+                <!--/*****/-->
+                <!--/**  action category data 的匹配规则以后需要再了解下**/-->
+                <!--/*****/-->
+                <action android:name="com.wuzp.mylibluancher.service.CommonService"/>
+            </intent-filter>
+        </service>
+        <!--/***********/-->
+        <!--/***service end ****/-->
+        <!--/***********/-->
     </application>
 
 </manifest>
