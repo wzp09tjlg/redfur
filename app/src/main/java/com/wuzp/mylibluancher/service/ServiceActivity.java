@@ -5,14 +5,21 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.Debug;
+import android.os.Environment;
+import android.os.Handler;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import com.wuzp.commonlib.Utils.LogUtil;
 import com.wuzp.mylibluancher.R;
+import com.wuzp.mylibluancher.app.LApplication;
+
+import java.io.File;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,6 +39,7 @@ import butterknife.Unbinder;
  */
 public class ServiceActivity extends AppCompatActivity {
 
+    private static final String TAG = "ServiceActivity";
 
     @BindView(R.id.btn_common_service)
     Button mBtnCommonService;
@@ -41,6 +49,37 @@ public class ServiceActivity extends AppCompatActivity {
     Button btnOtherService;
 
     Unbinder unbinder = null;
+
+    static {
+
+        File tempFile = new File(Environment.getExternalStorageState() + "/" + TAG + ".trace");
+        if (tempFile == null) {
+            try {
+                tempFile.createNewFile();
+            } catch (Exception e) {
+            }
+        }
+    }
+
+    public ServiceActivity() {
+        super();
+        //进行性能的代码调优，在方法级别上查看某个方法耗费的时间 以及调用的频繁度
+        //指定一个目录，开始写文件
+//        File tempFile = new File(Environment.getExternalStorageState()+"/"+TAG+".trace");
+//        if(tempFile == null){
+//            try {
+//                tempFile.createNewFile();
+//            }catch (Exception e){}
+//        }
+        Debug.startMethodTracing(TAG);
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Handler handler = new Handler();
+            }
+        }).start();
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,11 +95,12 @@ public class ServiceActivity extends AppCompatActivity {
             unbinder.unbind();
         }
         if (mConnect != null) {
-            unbindService(mConnect);
+            // unbindService(mConnect);
         }
+        Debug.stopMethodTracing();
     }
 
-    @OnClick({R.id.btn_common_service, R.id.btn_bind_service,R.id.btn_other_service})
+    @OnClick({R.id.btn_common_service, R.id.btn_bind_service, R.id.btn_other_service})
     public void onClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_common_service:
@@ -72,7 +112,7 @@ public class ServiceActivity extends AppCompatActivity {
                 break;
             case R.id.btn_other_service:
                 openOtherService();
-                 break;
+                break;
         }
     }
 
@@ -83,7 +123,8 @@ public class ServiceActivity extends AppCompatActivity {
         //普通的启动方式
         //startService(intent);
         //bind的绑定方式
-        bindService(intent, mConnect, Service.BIND_AUTO_CREATE);
+        //bindService(intent, mConnect, Service.BIND_AUTO_CREATE);
+        startService(intent);
         // 隐式启动service
     }
 
@@ -94,8 +135,8 @@ public class ServiceActivity extends AppCompatActivity {
         LogUtil.d("result1:" + result1);
     }
 
-    private void openOtherService(){
-        Intent intent = new Intent(this,OtherServiceActivity.class);
+    private void openOtherService() {
+        Intent intent = new Intent(this, OtherServiceActivity.class);
         startActivity(intent);
     }
 
@@ -118,4 +159,40 @@ public class ServiceActivity extends AppCompatActivity {
         }
 
     };
+
+
+    ///////////////// test threadLocal
+    ThreadLocal<Boolean> mBooleanThreadLocal = new ThreadLocal<>();
+
+    private void testThreadLoca() {
+        mBooleanThreadLocal.set(true);
+        Log.d(TAG, "[Thread#main]mBooleanThreadLocal=" + mBooleanThreadLocal.get());
+
+        new
+
+                Thread("Thread#1") {
+                    @Override
+                    public void run() {
+                        mBooleanThreadLocal.set(false);
+                        Log.d(TAG, "[Thread#1]mBooleanThreadLocal=" + mBooleanThreadLocal.get());
+                    }
+
+                    ;
+                }.
+
+                start();
+
+        new
+
+                Thread("Thread#2") {
+                    @Override
+                    public void run() {
+                        Log.d(TAG, "[Thread#2]mBooleanThreadLocal=" + mBooleanThreadLocal.get());
+                    }
+
+
+                };
+
+
+    }
 }

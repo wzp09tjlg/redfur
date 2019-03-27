@@ -73,7 +73,8 @@ public class OtherServiceActivity extends AppCompatActivity {
 
     private void bindCommonService() {
         Intent intent = new Intent(this, CommonService.class);
-        bindService(intent, mConnect, Service.BIND_AUTO_CREATE);
+        //bindService(intent, mConnect, Service.BIND_AUTO_CREATE);
+        startService(intent);
     }
 
     private void checkServiceAbility() {

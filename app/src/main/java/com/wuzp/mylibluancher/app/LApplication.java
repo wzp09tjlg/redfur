@@ -30,7 +30,7 @@ public class LApplication extends Application {
         if (checkLeakCanary(this)) {
             return;
         }
-        initBlockCanary();
+        //initBlockCanary();
     }
 
     //设置leakCanary检查
